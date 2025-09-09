@@ -1,0 +1,7 @@
+body{
+    background-color: lightgreen;
+}
+.name,.bio,.movies,.header{
+    font-family: cursive;
+    color: blueviolet;
+}

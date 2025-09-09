@@ -1,0 +1,1 @@
+const check=alert("The file is linked successsfully!")
