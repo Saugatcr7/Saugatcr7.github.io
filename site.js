@@ -20,3 +20,4 @@ const welcome=document.querySelector('#welcome');
 
      welcome.textContent="It is Evening"
  }
+ localStorage.setItem("It's a secret to everybody.","I think you should add some basics of React in the ending period of the semester.");
