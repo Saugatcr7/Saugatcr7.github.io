@@ -99,3 +99,25 @@ btn1.addEventListener("click", () => {
 
 });
 renderTodos()
+
+const getRandomPokemon= async ()=>{
+  const url = 'https://pokeapi.co/api/v2/pokemon/' + Math.floor(Math.random() * 150)
+  const response= await fetch(url);
+  const data=await response.json();
+  return data;
+}
+getRandomPokemon()
+const renderPokemon=async(data)=>{
+  const div=document.getElementById('cartoon')
+  const img = document.createElement('img')
+  img.src = data.sprites.front_default
+  img.alt = data.name;
+  div.append(img)
+  return data;
+  
+}
+
+(async()=>{
+  const pokemonObject= await getRandomPokemon();
+  renderPokemon(pokemonObject)
+})();
